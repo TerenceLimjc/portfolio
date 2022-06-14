@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  display: flex;
+  min-height: 90vh;
+  background-color: #F5F5F5;
+  align-items: center;
+}
+
+section:first-child {
+  background-color: #F0F0F0;
+  padding-top: 64px;
+}
