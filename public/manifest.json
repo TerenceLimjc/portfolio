@@ -20,6 +20,8 @@
   ],
   "start_url": "https://terencelimjc.github.io/portfolio/",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "author": "Terence Lim",
+  "description": "Hello there &#129309; Welcome to my portfolio"
 }
