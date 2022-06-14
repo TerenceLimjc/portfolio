@@ -50,6 +50,25 @@ const DownloadResume = () => {
   //Set the File URL.
   var fileName = "2022 - Resume (FS).pdf";
   var url = process.env.PUBLIC_URL + "/" + fileName;
+  var windowReference: Window | null;
+
+  //Check the Browser type and download the File.
+  let isIE = false || !!document.documentMode;
+  let isSafari =  !!navigator.userAgent.match(/Version\/[\d\.]+.*Safari/);
+  let isIOS = ([
+    'iPad Simulator',
+    'iPhone Simulator',
+    'iPod Simulator',
+    'iPad',
+    'iPhone',
+    'iPod'
+  ].includes(navigator.platform)
+  // iPad on iOS 13 detection
+  || (navigator.userAgent.includes("Mac") && "ontouchend" in document));
+
+  if (isIOS && isSafari) {
+    windowReference = window.open();
+  }
  
   //Create XMLHTTP Request.
   var req = new XMLHttpRequest();
@@ -58,20 +77,23 @@ const DownloadResume = () => {
   req.onload = function () {
       //Convert the Byte Data to BLOB object.
       var blob = new Blob([req.response], { type: "application/octetstream" });
-
-      //Check the Browser type and download the File.
-      var isIE = false || !!document.documentMode;
       if (isIE) {
         navigator.msSaveBlob && navigator.msSaveBlob(blob, fileName);
       } else {
           var url = window.URL || window.webkitURL;
           var link = url.createObjectURL(blob);
-          var a = document.createElement("a");
-          a.setAttribute("download", fileName);
-          a.setAttribute("href", link);
-          document.body.appendChild(a);
-          a.click();
-          document.body.removeChild(a);
+          if (isIOS && isSafari && windowReference !== null) {
+            windowReference.location = url.createObjectURL(new Blob([req.response], { type: "application/pdf" }));
+          } else if (isSafari) {
+            window.open(link, "_blank");
+          } else {
+            var a = document.createElement("a");
+            a.setAttribute("download", fileName);
+            a.setAttribute("href", link);
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+          }
       }
   };
   req.send();
