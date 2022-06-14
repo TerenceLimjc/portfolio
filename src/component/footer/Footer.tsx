@@ -24,7 +24,7 @@ const Footer = () => {
         <Container>
           <Navbar.Brand href="#">
             <img
-              src="/brand.png"
+              src={`${process.env.PUBLIC_URL}/brand.png`}
               height="38"
               className="d-inline-block align-top"
               alt="Terence brand logo"
@@ -34,16 +34,16 @@ const Footer = () => {
           <Navbar.Collapse id="basic-navbar-nav" className='flex-grow-0'>
             <Nav className="ms-auto" defaultActiveKey="#home">
               <CustomNavLink href="https://www.linkedin.com/in/limjcterence/" target="_blank">
-                <img src="/linkedin.png" alt="LinkedIn" height="18"/>
+                <img src={`${process.env.PUBLIC_URL}/linkedin.png`} alt="LinkedIn" height="18"/>
               </CustomNavLink>
               <CustomNavLink href="https://www.instagram.com/terenceljc/" target="_blank">
-                <img src="/instagram.png" alt="Instagram" height="18"/>
+                <img src={`${process.env.PUBLIC_URL}/instagram.png`} alt="Instagram" height="18"/>
               </CustomNavLink>
               <CustomNavLink href="https://wa.me/+6581275109" target="_blank">
-                <img src="/whatsapp.png" alt="Whatsapp" height="23"/>
+                <img src={`${process.env.PUBLIC_URL}/whatsapp.png`} alt="Whatsapp" height="23"/>
               </CustomNavLink>
               <CustomNavLink href="mailto: terencelimjc@gmail.com" target="_blank">
-                <img src="/gmail.png" alt="Gmail" height="18"/>
+                <img src={`${process.env.PUBLIC_URL}/gmail.png`} alt="Gmail" height="18"/>
               </CustomNavLink>
             </Nav>
           </Navbar.Collapse>

@@ -20,7 +20,7 @@ const About = () => {
       </div>
       <div className="row pt-sm-5">
         <div className="col-12 col-sm-6 pe-sm-5 mb-4">
-          <img className='w-100' src="/profile_picture.png" alt="Terence on a boat"></img>
+          <img className='w-100' src={`${process.env.PUBLIC_URL}/profile_picture.png`} alt="Terence on a boat"></img>
         </div>
         <div className="col-12 col-sm-6 text-start align-self-center">
           <div className='mb-4 mb-sm-5'>
@@ -49,7 +49,7 @@ const About = () => {
 const DownloadResume = () => {
   //Set the File URL.
   var fileName = "2022 - Resume (FS).pdf";
-  var url = "/" + fileName;
+  var url = process.env.PUBLIC_URL + "/" + fileName;
  
   //Create XMLHTTP Request.
   var req = new XMLHttpRequest();

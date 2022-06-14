@@ -16,7 +16,7 @@ const PortfolioCards = () => {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="insurance-digital-landscape.png"
+          src={`${process.env.PUBLIC_URL}/insurance-digital-landscape.png`}
           alt="Digital transformation of insurance"
         />
         <CustomCards>
@@ -28,7 +28,7 @@ const PortfolioCards = () => {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="shopform-landscape.png"
+          src={`${process.env.PUBLIC_URL}/shopform-landscape.png`}
           alt="Shopform commerce"
         />
         <CustomCards>
@@ -39,7 +39,7 @@ const PortfolioCards = () => {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="autojot-landscape.jpg"
+          src={`${process.env.PUBLIC_URL}/autojot-landscape.jpg`}
           alt="Usability testing"
         />
         <CustomCards>
@@ -51,7 +51,7 @@ const PortfolioCards = () => {
     <Row xs={1} className="g-4 d-sm-none mb-5">
         <Col>
           <Card>
-            <Card.Img variant="top" src="insurance-digital-square.png" />
+            <Card.Img variant="top" src={`${process.env.PUBLIC_URL}/insurance-digital-square.png`} />
             <Card.Body>
               <Card.Title>Digital Platform @ Prudential</Card.Title>
               <Card.Text>
@@ -64,7 +64,7 @@ const PortfolioCards = () => {
         </Col>
         <Col>
           <Card>
-            <Card.Img variant="top" src="shopform-square.png" />
+            <Card.Img variant="top" src={`${process.env.PUBLIC_URL}/shopform-square.png`} />
             <Card.Body>
               <Card.Title>Mobile App @ Shopform</Card.Title>
               <Card.Text>
@@ -75,7 +75,7 @@ const PortfolioCards = () => {
         </Col>
         <Col>
           <Card>
-            <Card.Img variant="top" src="autojot-square.jpg" />
+            <Card.Img variant="top" src={`${process.env.PUBLIC_URL}/autojot-square.jpg`} />
             <Card.Body>
               <Card.Title>Autojot @ Objective Eye Tracking</Card.Title>
               <Card.Text>

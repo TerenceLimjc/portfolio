@@ -18,7 +18,7 @@ const Home = () => {
   <div className="container">
     <div className="row">
       <div className="col-12 col-sm-6 pe-sm-5">
-        <img src="/sticker.png" alt="me with my cat on the laptop" className="img-fluid"/>
+        <img src={`${process.env.PUBLIC_URL}/sticker.png`} alt="Terence with my cat on the laptop" className="img-fluid"/>
       </div>
       <div className="col-12 col-sm-6 text-start align-self-center">
         <p className='mb-0'>CIAO! I'M</p>

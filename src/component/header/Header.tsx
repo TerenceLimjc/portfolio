@@ -21,7 +21,7 @@ const Header = () => {
       <Container>
         <Navbar.Brand href="#top">
           <img
-            src="/brand.png"
+            src={`${process.env.PUBLIC_URL}/brand.png`}
             height="38"
             className="d-inline-block align-top"
             alt="Terence brand logo"
