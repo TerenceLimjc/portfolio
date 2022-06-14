@@ -24,7 +24,7 @@ const Footer = () => {
         <Container>
           <Navbar.Brand href="#">
             <img
-              src="/brand.jpg"
+              src="/brand.png"
               height="38"
               className="d-inline-block align-top"
               alt="Terence brand logo"
